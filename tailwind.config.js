@@ -18,7 +18,7 @@ module.exports = {
       },
       colors: {
         'off-white': '#F2F2F2'
-      }
+      },
     },
   },
   plugins: [],
