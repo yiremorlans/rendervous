@@ -660,6 +660,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -704,6 +709,7 @@ video {
   background: rgb(235,73,152);
   background: linear-gradient(33deg, rgba(235,73,152,1) 0%, rgba(235,73,152,1) 32%, rgba(249,115,23,1) 100%);
   border-radius: 69% 31% 77% 23% / 30% 15% 85% 70%;
+  padding: 4rem;
 }
 
 @media (min-width: 1024px) {
@@ -715,6 +721,11 @@ video {
 
   .lg\:p-12 {
     padding: 3rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .lg\:text-6xl {
