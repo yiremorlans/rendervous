@@ -16,16 +16,16 @@
     <body class="bg-no-repeat bg-cover bg-center" style="background-image: url('<%= posts[Math.floor(Math.random() * posts.length)].image%>');">
         <% } %>
 
-        <main class="">
-            <div class="space-x-2 flex justify-center items-center h-screen">
-                <img src="/imgs/render-icon.png" alt="rendervous icon" class="w-8">
-                <h1 class="text-4xl lg:text-6xl font-comfortaa text-white drop-shadow-[3px_3px_2px_rgba(0,0,0,0.5)]">rendervous</h1>
+        <main>
+            <div class="space-x-2 lg:space-x-4 flex justify-center items-center h-screen">
+                <img src="/imgs/render-icon.png" alt="rendervous icon" class="w-8 lg:w-12">
+                <h1 class="text-4xl lg:text-5xl font-comfortaa text-white drop-shadow-[3px_3px_2px_rgba(0,0,0,0.5)]">rendervous</h1>
             </div>
             
             
-            <div class="fixed bottom-0 w-full flex justify-center space-x-6 p-6 lg:p-12 lg:text-3xl lg:space-x-12 bg-off-white font-kanit font-thin">
+            <div class="fixed bottom-0 w-full flex justify-center space-x-6 p-6 md:text-2xl lg:p-12 lg:text-3xl lg:space-x-12 bg-off-white font-kanit font-thin">
                 <a href="/login" class="rounded-lg border-2 px-12 py-2">Login</a>
-                <a href="/signup" class="rounded-lg border-2 px-12 py-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white">Signup</a>
+                <a href="/signup" class="rounded-lg border-2 px-12 py-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 text-white">Signup</a>
             </div>
         </main>
     </body>

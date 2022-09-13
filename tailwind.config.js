@@ -2,9 +2,9 @@
 module.exports = {
   content: [
     './views/index.ejs',
-    // './views/login.ejs',
-    // './views/signup.ejs',
-    // './views/feed.ejs',
+    './views/login.ejs',
+    './views/signup.ejs',
+    './views/feed.ejs',
     './views/partials/header.ejs'
   ],
   theme: {
