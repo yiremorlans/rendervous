@@ -1,40 +1,36 @@
 <%- include('partials/header') -%>
-<section class="pb-28">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= user.userName %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
-      <div class="row justify-content-between">
-        <form class="inline mb-6" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
-          <button class="fa-regular fa-heart text-2xl mt-3" type="submit"></button>
+<section class="flex justify-center pb-28">
+  <div class="rounded-lg shadow-lg bg-white">
+    <img class="rounded-t-lg" src="<%= post.image%>"/>
+    <div class="p-6">
+      <div class="flex justify-between text-xl lg:text-2xl ">
+        <form action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
+        <button class="fa-regular fa-heart text-pink-600 hover:text-orange-500" type="submit"></button>
+      </form>
+      <%if(post.user == user.id){ %>
+        <form class="top-0 right-0" action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" >
+          <button class="fa-regular fa-trash-can" type="submit"></button>
         </form>
-        <span class="text-gray-900 block mt-3 font-medium lg:text-xl">
-          <%= post.likes%> 
-        <% if (post.likes == 1) { %>
-          <span>like</span>
-          <% } else { %>
-            <span>likes</span>
-        <% } %>
-        </span>
-        <%if(post.user == user.id){ %>
-        <form
-          action="/post/deletePost/<%= post.id %>?_method=DELETE"
-          method="POST"
-          class="col-3"
-        >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
-        </form>
-        <%}%>
+      <%}%>
       </div>
-    </div>
-    <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
-    </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+
+      <span class="text-gray-900 block mt-3 font-medium lg:text-xl">
+        <%= post.likes%> 
+      <% if (post.likes == 1) { %>
+        <span>like</span>
+        <% } else { %>
+          <span>likes</span>
+      <% } %>
+      </span>
+      <h2 class="text-gray-900 lg:text-xl font-medium mb-2 mt-6"><%= user.userName %></h2>
+      <p class="text-gray-700 text-base lg:text-xl mb-4"><%= post.caption %></p>
     </div>
   </div>
 </section>
 
 <%- include('partials/footer') -%>
+
+<!-- <div class="col-6 mt-5">
+  <a class="btn btn-primary" href="/profile">Return to Profile</a>
+  <a class="btn btn-primary" href="/feed">Return to Feed</a>
+</div> -->
