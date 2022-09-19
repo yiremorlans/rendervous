@@ -13,7 +13,8 @@ module.exports = {
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { posts: posts });
+      res.render("feed.ejs", { posts: posts, user: req.user });
+      console.log(posts)
     } catch (err) {
       console.log(err);
     }
@@ -54,7 +55,8 @@ module.exports = {
         }
       );
       console.log("Likes +1");
-      res.redirect(`/post/${req.params.id}`);
+      res.redirect('back'); //functional but returns back to the top in feed.ejs
+      // res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);
     }
