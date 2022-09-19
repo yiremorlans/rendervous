@@ -1,5 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
+const Comment = require("../models/Comment")
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -13,7 +14,8 @@ module.exports = {
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { posts: posts });
+      res.render("feed.ejs", { posts: posts, user: req.user });
+      console.log(posts)
     } catch (err) {
       console.log(err);
     }
@@ -21,7 +23,8 @@ module.exports = {
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      res.render("post.ejs", { post: post, user: req.user });
+      const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "asc" }).lean();
+      res.render("post.ejs", { post: post, user: req.user, comment: comments });
     } catch (err) {
       console.log(err);
     }
@@ -54,7 +57,8 @@ module.exports = {
         }
       );
       console.log("Likes +1");
-      res.redirect(`/post/${req.params.id}`);
+      res.redirect('back'); //functional but returns back to the top in feed.ejs
+      // res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);
     }
@@ -68,7 +72,7 @@ module.exports = {
       // Delete post from db
       await Post.remove({ _id: req.params.id });
       console.log("Deleted Post");
-      res.redirect("/profile");
+      res.redirect("/feed");
     } catch (err) {
       res.redirect("/profile");
     }

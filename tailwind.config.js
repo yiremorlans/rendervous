@@ -5,7 +5,10 @@ module.exports = {
     './views/login.ejs',
     './views/signup.ejs',
     './views/feed.ejs',
-    './views/partials/header.ejs'
+    './views/profile.ejs',
+    './views/post.ejs',
+    './views/partials/header.ejs',
+    './views/partials/footer.ejs'
   ],
   theme: {
     extend: {
