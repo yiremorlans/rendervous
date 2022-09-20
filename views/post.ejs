@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
-<section class="flex justify-center pb-28">
-  <div class="rounded-lg shadow-lg bg-white">
+<section class="flex flex-wrap justify-center pb-28 lg:px-16">
+  <div class="rounded-lg shadow-lg bg-white mb-8">
     <img class="rounded-t-lg" src="<%= post.image%>"/>
     <div class="p-6">
       <div class="flex justify-between text-xl lg:text-2xl ">
@@ -26,11 +26,48 @@
       <p class="text-gray-700 text-base lg:text-xl mb-4"><%= post.caption %></p>
     </div>
   </div>
+
+  <section class="w-full lg:w-2/5 mx-auto">
+    <form action="/comments/creatComment/<%= post._id%>" method="POST">
+      <div class="block mb-4 w-full bg-gray-50 rounded-lg border border-gray-200">
+          <div class="py-2 px-4 bg-white rounded-t-lg dark:bg-gray-800">
+              <label for="comment" class="sr-only">Your comment</label>
+              <textarea id="comment" rows="4" maxlength="650" class="px-0 w-full text-gray-900 bg-white border-0 focus:ring-0 focus:ring-orange-600" name="comment" placeholder="Write a comment..." required></textarea>
+          </div>
+          <div class="flex justify-between items-center py-3 px-3 border-t">
+              <button type="submit" class="inline-flex items-center border-2 rounded-lg px-6 py-2 text-white bg-gradient-to-r from-orange-500 to-pink-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500">
+                  Post comment
+              </button>
+          </div>
+      </div>
+    </form>
+
+    <% for(var i=0; i<comment.length; i++) {%>
+      <div class="rounded-lg shadow-lg bg-white w-full my-4">    
+        <div class="p-6">
+          <span class="font-bold pr-4"><%= comment[i].userName %></span>
+          <p class="inline-block"><%= comment[i].comment %></p>    
+          <form action="/comments/likeComment/<%= comment[i]._id %>?_method=PUT" method="POST">
+            <button class="fa-regular fa-heart text-pink-600 hover:text-orange-500 text-xl lg:text-2xl" type="submit"></button>
+          </form>
+          <%= comment[i].likes%> 
+            <% if (comment[i].likes == 1) { %>
+              <span>like</span>
+              <% } else { %>
+                <span>likes</span>
+            <% } %>
+          <%if(comment[i].createdById == user.id){ %>
+            <form class="relative" action="/comments/deleteComment/<%= post._id %>/<%= comment[i]._id %>?_method=DELETE" method="POST" >
+              <button class="fa-regular fa-trash-can absolute bottom-0 right-0" type="submit"></button>
+            </form>
+          <%}%>
+            
+          </span>
+        </div>        
+      </div>
+      <% } %>
+  </section>
+  
 </section>
 
 <%- include('partials/footer') -%>
-
-<!-- <div class="col-6 mt-5">
-  <a class="btn btn-primary" href="/profile">Return to Profile</a>
-  <a class="btn btn-primary" href="/feed">Return to Feed</a>
-</div> -->
