@@ -1,49 +1,36 @@
 <%- include('partials/header') -%>
-<div class="container">
-  <div class="row mt-5">
-      <section>
-        <div class="flex justify-center">
-          <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-            <h2>Add a post</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-            </form>
-          </div>
+<section>
+  <h2 class="p-2 text-xl text-center">Add a post</h2>
+  <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+    <div class="block mb-4 w-full lg:w-1/2 bg-gray-50 rounded-lg border border-gray-200 mx-auto">
+        <div class="py-2 px-4 bg-white rounded-t-lg">
+            <label for="caption" class="form-label">Caption</label>
+            <textarea id="comment" rows="4" maxlength="650" class="px-0 w-full text-gray-900 bg-white border-0 focus:ring-0 focus:ring-orange-600" name="caption" placeholder="Give it some context or write about the prompt you used..." required></textarea>
         </div>
-      </section>
-      <div>
-        <ul>
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
-      </div>  
+        <div class="relative flex justify-between items-center py-3 px-3 border-t">
+          <div class="p-1 bg-white rounded-t-lg w-fit">
+            <label for="imgUpload" class="sr-only">Image</label>
+            <input type="file" class="rounded" id="imageUpload" name="file">
+          </div>
+            <button type="submit" class="absolute bottom-2 right-3 inline-flex items-center border-2 rounded-lg px-6 py-2 text-white bg-gradient-to-r from-orange-500 to-pink-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500" value="Upload">
+                Submit
+            </button>
+        </div>
     </div>
-  </div>
-</div>
-<div class="flex justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
-    <p class="text-gray-700 text-base mb-4">
-      Some quick example text to build on the card title and make up the bulk of the card's
-      content.
-    </p>
-    <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
-  </div>
-</div>
+  </form>
+
+  <section class="overflow-hidden mb-6 pb-6 lg:mb-24">
+    <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+      <div class="flex flex-wrap -m-1 md:-m-2">
+        <% for(var i=0; i<posts.length; i++) {%>
+        <div class="flex flex-wrap w-full lg:w-1/2">
+          <a href="/post/<%= posts[i]._id%>" class="w-full p-1 md:p-4">
+            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg shadow-lg" src="<%= posts[i].image%>"/>
+          </a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+</section> 
 <%- include('partials/footer') -%>
