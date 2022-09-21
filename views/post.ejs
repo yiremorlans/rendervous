@@ -22,12 +22,12 @@
           <span>likes</span>
       <% } %>
       </span>
-      <h2 class="text-gray-900 lg:text-xl font-medium mb-2 mt-6"><%= user.userName %></h2>
+      <h2 class="text-gray-900 lg:text-xl font-medium mb-2 mt-6"><%= postUser.userName %></h2>
       <p class="text-gray-700 text-base lg:text-xl mb-4"><%= post.caption %></p>
     </div>
   </div>
 
-  <section class="w-full lg:w-2/5 mx-auto">
+  <section class="w-full xl:w-1/2 mx-auto">
     <form action="/comments/creatComment/<%= post._id%>" method="POST">
       <div class="block mb-4 w-full bg-gray-50 rounded-lg border border-gray-200">
           <div class="py-2 px-4 bg-white rounded-t-lg">
