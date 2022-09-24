@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon.png"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Kanit:wght@100;400&display=swap" rel="stylesheet">
@@ -14,14 +15,15 @@
     <% for(var i=0; i<posts.length; i++) {%>
 
     <body class="bg-no-repeat bg-cover bg-center" style="background-image: url('<%= posts[Math.floor(Math.random() * posts.length)].image%>');">
-        <% } %>
 
+        <% } %>
+        
         <main>
             <div class="space-x-2 lg:space-x-4 flex justify-center items-center h-screen">
                 <img src="/imgs/render-icon.png" alt="rendervous icon" class="w-8 lg:w-12">
                 <h1 class="text-4xl lg:text-5xl font-comfortaa text-white drop-shadow-[3px_3px_2px_rgba(0,0,0,0.5)]">rendervous</h1>
             </div>
-            
+
             
             <div class="fixed bottom-0 w-full flex justify-center space-x-6 p-6 md:text-2xl lg:p-12 lg:text-3xl lg:space-x-12 bg-off-white font-kanit font-thin">
                 <a href="/login" class="rounded-lg border-2 px-12 py-2">Login</a>
