@@ -8,7 +8,8 @@ module.exports = {
     './views/profile.ejs',
     './views/post.ejs',
     './views/partials/header.ejs',
-    './views/partials/footer.ejs'
+    './views/partials/footer.ejs',
+    './views/partials/navigation.ejs'
   ],
   theme: {
     extend: {
@@ -19,8 +20,9 @@ module.exports = {
         'comfortaa': ["'Comfortaa'", 'cursive'],
         'kanit': ["'Kanit'", 'sans-serif']
       },
-      colors: {
-        'off-white': '#F2F2F2'
+      colors: {     
+        'primary': '#f97317',
+        'off-white': '#F2F2F2',
       },
     },
   },
