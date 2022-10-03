@@ -6,6 +6,7 @@
     background: rgb(235,73,152);
     background: linear-gradient(33deg, rgba(235,73,152,1) 0%, rgba(235,73,152,1) 32%, rgba(249,115,23,1) 100%);
     border-radius: 72% 28% 70% 30% / 24% 80% 20% 76%;
+
 }
 
 .login {

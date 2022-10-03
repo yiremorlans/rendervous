@@ -1,26 +1,8 @@
-<%- include('partials/header') -%>
+<%- include('partials/navigation') -%>
 <section>
-  <h2 class="p-2 text-xl text-center">Add a post</h2>
-  <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-    <div class="block mb-4 w-full lg:w-1/2 bg-gray-50 rounded-lg border border-gray-200 mx-auto">
-        <div class="py-2 px-4 bg-white rounded-t-lg">
-            <label for="caption" class="form-label">Caption</label>
-            <textarea id="comment" rows="4" maxlength="650" class="px-0 w-full text-gray-900 bg-white border-0 focus:ring-0 focus:ring-orange-600" name="caption" placeholder="Give it some context or write about the prompt you used..." required></textarea>
-        </div>
-        <div class="relative flex justify-between items-center py-3 px-3 border-t">
-          <div class="p-1 bg-white rounded-t-lg w-fit">
-            <label for="imgUpload" class="sr-only">Image</label>
-            <input type="file" class="rounded" id="imageUpload" name="file">
-          </div>
-            <button type="submit" class="absolute bottom-2 right-3 inline-flex items-center border-2 rounded-lg px-6 py-2 text-white bg-gradient-to-r from-orange-500 to-pink-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500" value="Upload">
-                Submit
-            </button>
-        </div>
-    </div>
-  </form>
-
   <section class="overflow-hidden mb-6 pb-6 lg:mb-24">
-    <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+    <h1 class="text-2xl text-center pb-4">Welcome <span class="font-bold"><%= user.userName %></span>!</h1>
+    <div class="container px-5 py-2 mx-auto lg:px-32">
       <div class="flex flex-wrap -m-1 md:-m-2">
         <% for(var i=0; i<posts.length; i++) {%>
         <div class="flex flex-wrap w-full lg:w-1/2 ">

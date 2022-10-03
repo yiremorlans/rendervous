@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Kanit:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <title>rendervous</title>
+  </head>
+  <body class="font-kanit font-thin bg-off-white pt-3">
+    <div class="navbar pb-6">
+        <div class="navbar-start">
+          <div class="dropdown pl-2">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-off-white rounded-box w-60">
+              <li><a class="text-lg" href="/feed">Feed</a></li>
+              <li><a class="text-lg" href="/profile">Profile</a></li>
+              <li><a class="text-lg font-bold" href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+            <img src="/imgs/render-icon.png" alt="rendervous icon" class="w-8 lg:w-10 pr-2">
+            <a class="text-xl lg:text-3xl text-neutral-focus font-comfortaa">rendervous</a>
+        </div>
+        <div class="navbar-end pr-4">
+            <!-- The button to open modal -->
+            <label for="my-modal-3" class="btn border-base-200 rounded-full lg:px-4 lg:py-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white w-20 md:w-auto"><i class="fa-solid fa-plus pr-1"></i> New Post</label>
+    
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <div class="modal">
+              <div class="modal-box relative">
+                <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+                  <div class="block w-full bg-gray-50 rounded-lg border border-gray-200 mx-auto">
+                      <div class="py-2 px-4 bg-white rounded-t-lg">
+                          <label for="caption" class="form-label">Create new post</label>
+                          <textarea id="comment" rows="4" maxlength="650" class="px-0 w-full text-gray-900 bg-white border-0 focus:ring-0 focus:ring-orange-600" name="caption" placeholder="Give it some context or write about the prompt you used..." required></textarea>
+                      </div>
+                      <div class="relative flex justify-between items-center py-3 px-3 border-t">
+                        <div class="p-1 bg-white rounded-t-lg w-fit">
+                          <label for="imgUpload" class="sr-only">Image</label>
+                          <input type="file" class="rounded w-24 md:w-fit" id="imageUpload" name="file">
+                        </div>
+                          <button type="submit" class="absolute bottom-2 right-3 inline-flex items-center border-2 rounded-lg px-6 py-2 text-white bg-gradient-to-r from-orange-500 to-pink-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500" value="Upload">
+                              Submit
+                          </button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+              <span class="badge badge-sm badge-secondary indicator-item"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+  </body>
+</html>
