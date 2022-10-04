@@ -42,10 +42,12 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#optimizations">Optimizations</a></li>
+    <li><a href="#lessonslearned">Lessons Learned</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    
   </ol>
 </details>
 
@@ -62,11 +64,11 @@ Rendervous is a social media platform for people who appreciate, enjoy, or creat
 
 ### Built With
 
-- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-- ![EJS](https://img.shields.io/badge/ejs-%234ea94b.svg?style=for-the-badge&logo=ejs&logoColor=white)
-- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![EJS](https://img.shields.io/badge/ejs-%234ea94b.svg?style=for-the-badge&logo=ejs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 
 
@@ -83,7 +85,6 @@ To get rendervous running on your local machine, you will need Node.js and the f
 
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 
-* npm
   ```sh
   npm install npm@latest -g
   ```
@@ -101,12 +102,12 @@ To get rendervous running on your local machine, you will need Node.js and the f
    npm install
    ```
 5. Enter your port, database string, and API keys in `config.js` or `.env` file
-   ```
-  PORT = 2121 (can be any port example: 3000)
-  DB_STRING = `your database URI`
-  CLOUD_NAME = `your cloudinary cloud name`
-  API_KEY = `your cloudinary api key`
-  API_SECRET = `your cloudinary api secret`
+   ```sh
+    PORT = 2121 (can be any port example: 3000)
+    DB_STRING = `your database URI`
+    CLOUD_NAME = `your cloudinary cloud name`
+    API_KEY = `your cloudinary api key`
+    API_SECRET = `your cloudinary api secret`
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -140,7 +141,7 @@ See the [open issues](https://github.com/yiremorlans/rendervous/issues) for a fu
  
 Happy Notes future optimizations include ongoing improvements to the user interface as the team gathers more feedback from users. The team opted to go with a default dark theme, however future versions of the app may include option for light theme as well. There is room to implement an edit/delete features for specific study decks and performance improvements as the app continues testing among users. A further optimization would be adding a feature that allows users to hide cards that they are comfortable with from the default view and a toggle option to let them view the hidden cards seperately.
  
-## Lessons Learned:
+## Lessons Learned
 
 Happy Notes is a collaborative effort between a group of developers working together for the first time, and growing their skills as developers in a team environment. The team of Happy Notes had to get more comfortable with many technologies while creating a full stack web app that incorporates a node.js MVC structure. The devs wanted a friendly and robust UI that involved learning how to manipulate elements through various CSS properties and incorporating front end frameworks and components like Materialize and Swiper.js. A good portion involved using package libraries' respective documentation to troubleshoot issues encountered along the way. The team incorporated method-override to send put requests through forms making Happy Notes a RESTful application. Our devs also required a deep dive into understanding relationships in a non-relational database like for implementing subdocuments within the schema using mongoose and one-to-many relationships data model. The use of the MVC structure for this project allowed the devs to work on sections of the program logic at the same time while using git, making collaboration easier.
 
