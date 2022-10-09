@@ -14,7 +14,7 @@
     <a href="https://github.com/yiremorlans/rendervous"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/yiremorlans/rendervous">View Demo</a>
+    <a href="https://rendervous-production.up.railway.app/">View Demo</a>
     ·
     <a href="https://github.com/yiremorlans/rendervous/issues">Report Bug</a>
     ·
@@ -121,15 +121,16 @@ To get the project running on your local machine, you will need Node.js and the 
 ## Usage
 
 <img src="https://github.com/yiremorlans/rendervous/blob/main/public/imgs/render-profile.png" alt="profile page" width="300px"/>
+<img src="https://github.com/yiremorlans/rendervous/blob/main/public/imgs/render-post.png" alt="create a post page" width="300px"/>
 
  - Sign up to get started. 
  - Browse, like, and comment on the art within the community or upload your own AI creations:
 
-<img src="https://github.com/yiremorlans/rendervous/blob/main/public/imgs/render-post.png" alt="create a post page" width="300px"/>
+
 
  - Popular AI art generators to explore :
  * [Dall-E 2](https://openai.com/dall-e-2/)
- * [Stability AI](beta.dreamstudio.ai)
+ * [Stability AI](https://beta.dreamstudio.ai)
 
 
 
@@ -187,9 +188,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@xenaaMorph](https://twitter.com/xenaaMorph)
+Yire Morlans - [@xenaaMorph](https://twitter.com/xenaaMorph)
 
-Project Link: [https://github.com/yiremorlans/rendervous](https://github.com/yiremorlans/rendervous)
+Project Link: [rendervous](https://rendervous-production.up.railway.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
