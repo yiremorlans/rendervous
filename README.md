@@ -113,7 +113,7 @@ To get the project running on your local machine, you will need Node.js and the 
     API_KEY = `your cloudinary api key`
     API_SECRET = `your cloudinary api secret`
    ```
-6. Run in development environment || start the app
+6. Run in development environment || run the app on localhost:YOURPORT
     ```sh 
     npm run dev
     ```
