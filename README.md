@@ -153,7 +153,11 @@ Notifications for new comments left on user post is currently in developement, a
 
 ## Lessons Learned
 
-Had to get more comfortable with many technologies while creating a full stack web app that incorporates a node.js MVC structure. I wanted a user friendly and robust UI, and that involved learning how to manipulate elements through various CSS properties and incorporating front end frameworks and components like DaisyUI plugin and TailwindCSS. A good portion involved using package libraries' respective documentation to troubleshoot issues encountered along the way. The team incorporated method-override to send put requests through forms making Happy Notes a RESTful application. Our devs also required a deep dive into understanding relationships in a non-relational database like for implementing subdocuments within the schema using mongoose and one-to-many relationships data model. The use of the MVC structure for this project allowed the devs to work on sections of the program logic at the same time while using git, making collaboration easier.
+I knew I wanted to incorporate an MVC structure to maintain organization during development but also to allow future improvements and features to be implemented post-production of rendervous. New features can eaasily be worked into a new or exisiting model (thanks mongoose), followed by logic and data retrieval within the controllers to then routing and paths be configured accordingly. 
+
+It was important to me to have a robust code base that would fascilitate incorporating new features, but also modularity so that the views could be swapped out to integrate a different front-end library, like React. TailwindCSS + DaisyUI combination offered components and additional UI support I had envisioned for a clean aesthetic and user friendly experience as part of rendervous' core features. 
+
+A good portion involved using package libraries' respective documentation to troubleshoot issues encountered along the way, like method-override to send put requests through forms making rendervous a RESTful application. 
 
 <!-- CONTRIBUTING -->
 ## Contributing
