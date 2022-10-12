@@ -60,6 +60,6 @@ app.use("/post", postRoutes);
 app.use("/comments", commentRoutes);
 
 //Server Running
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
 });
