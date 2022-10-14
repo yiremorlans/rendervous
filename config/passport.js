@@ -1,30 +1,7 @@
-// const TwitterStrategy = require("passport-twitter").Strategy;
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const User = require("../models/User");
 
-// TWITTER STRATEGY 
-// module.exports = function (passport) {
-//     passport.use(new TwitterStrategy({
-//         consumerKey: TWITTER_CONSUMER_KEY,
-//         consumerSecret: TWITTER_CONSUMER_SECRET,
-//         callbackURL: "http://localhost:2001/auth/twitter/redirect"
-//       },
-//       function(token, tokenSecret, profile, cb) {
-//         User.findOrCreate({ twitterId: profile.id }, function (err, user) {
-//           return cb(err, user);
-//         });
-//       }
-//     ));
-
-//   passport.serializeUser((user, done) => {
-//     done(null, user.id);
-//   });
-
-//   passport.deserializeUser((id, done) => {
-//     User.findById(id, (err, user) => done(err, user));
-//   });
-// };
 
 // LOCAL STRATEGY
 module.exports = function (passport) {
