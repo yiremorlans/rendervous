@@ -1,11 +1,10 @@
 <%- include('partials/navigation') -%>
-
-<section class="flex flex-wrap justify-center px-2 md:px-10 gap-x-12 gap-y-6 lg:gap-y-32">
+<section class="flex flex-col px-4 md:px-10 gap-y-6 lg:gap-y-32 relative mx-auto">
   <% for(var i=0; i<posts.length; i++) {%>
-  <div class="rounded-lg shadow-lg bg-white">
+  <div class="rounded-lg shadow-lg bg-white mx-auto max-w-4xl">
                
     <a href="/post/<%= posts[i]._id%>">
-      <img class="rounded-t-lg" src="<%= posts[i].image%>">
+      <img class="rounded-t-lg inset-0 relative" src="<%= posts[i].image%>">
     </a>
     <div class="p-6">
       <form class="inline mb-4 lg:mb-6" action="/post/likePost/<%= posts[i]._id %>?_method=PUT" method="POST">

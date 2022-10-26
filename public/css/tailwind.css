@@ -3053,6 +3053,13 @@ body[dir="rtl"] .checkbox:checked,
   position: relative;
 }
 
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -3079,6 +3086,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .right-3 {
   right: 0.75rem;
+}
+
+.col-auto {
+  grid-column: auto;
 }
 
 .-m-1 {
@@ -3221,8 +3232,51 @@ body[dir="rtl"] .checkbox:checked,
   width: 1.75rem;
 }
 
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.w-6\/12 {
+  width: 50%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.min-w-fit {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
 }
 
 .flex-col {
@@ -3370,6 +3424,11 @@ body[dir="rtl"] .checkbox:checked,
   --tw-gradient-to: #ec4899;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -3454,6 +3513,11 @@ body[dir="rtl"] .checkbox:checked,
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pb-6 {
@@ -3869,6 +3933,18 @@ body[dir="rtl"] .checkbox:checked,
 
   .xl\:w-1\/2 {
     width: 50%;
+  }
+
+  .xl\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .xl\:max-w-3xl {
+    max-width: 48rem;
+  }
+
+  .xl\:max-w-4xl {
+    max-width: 56rem;
   }
 
   .xl\:pb-10 {

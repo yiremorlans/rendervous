@@ -1,6 +1,6 @@
 <%- include('partials/navigation') -%>
-<section class="flex flex-wrap justify-center px-2 md:px-10 pb-10">
-  <div class="rounded-lg shadow-lg bg-white mb-8">
+<section class="flex flex-col mx-auto px-4 md:px-10 pb-10">
+  <div class="rounded-lg shadow-lg bg-white mb-8 mx-auto max-w-4xl">
     <img class="rounded-t-lg" src="<%= post.image%>"/>
     <div class="p-6">
       <div class="flex justify-between text-xl lg:text-2xl ">
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <section class="w-full xl:w-1/2 mx-auto">
+  <section class="w-full xl:max-w-4xl mx-auto">
     <form action="/comments/creatComment/<%= post._id%>" method="POST">
       <div class="block mb-4 w-full bg-gray-50 rounded-lg border border-gray-200">
           <div class="py-2 px-4 bg-white rounded-t-lg">
