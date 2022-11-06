@@ -156,13 +156,13 @@ See the [open issues](https://github.com/yiremorlans/rendervous/issues) for a fu
 
 ## Optimizations
  
-Notifications for new comments left on user post is currently in developement, as well as notifications to new posts by friends will be implemented in the near future as well. Planned future optimizations include ongoing improvements to the user interface and navigation. Users will be able to add friends to their profile, which will allow them to view all the posts specific to their friends. 
+Notifications for new comments left on user post is currently in development, as well as notifications to new posts by friends will be implemented in the near future as well. Planned future optimizations include ongoing improvements to the user interface and navigation. Users will be able to add friends to their profile, which will allow them to view all the posts specific to their friends. 
 
 ## Lessons Learned
 
-I knew I wanted to incorporate an MVC structure to maintain organization during development but also to allow future improvements and features to be implemented post-production of rendervous. New features can easily be worked into a new or exisiting model (thanks mongoose), followed by logic and data retrieval within the controllers to then routing and paths be configured accordingly. 
+I knew I wanted to incorporate an MVC structure to maintain organization during development but also to allow future improvements and features to be implemented post-production of rendervous. New features can easily be worked into a new or existing model (thanks mongoose), followed by logic and data retrieval within the controllers to then routing and paths be configured accordingly. 
 
-It was important to me to have a robust code base that would fascilitate incorporating new features, but also modularity so that the views could be swapped out to integrate a different front-end library, like React. TailwindCSS + DaisyUI combination offered components and additional UI support I had envisioned for a clean aesthetic and user friendly experience as part of rendervous' core features. 
+It was important to me to have a robust code base that would facilitate incorporating new features, but also modularity so that the views could be swapped out to integrate a different front-end library, like React. TailwindCSS + DaisyUI combination offered components and additional UI support I had envisioned for a clean aesthetic and user friendly experience as part of rendervous' core features. 
 
 A good portion involved using package libraries' respective documentation to troubleshoot issues encountered along the way, like method-override to send put requests through forms making rendervous a RESTful application. 
 
