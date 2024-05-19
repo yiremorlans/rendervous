@@ -197,9 +197,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Yire Morlans - [@xenaaMorph](https://twitter.com/xenaaMorph)
-
-Project Link: [rendervous](https://rendervous-production.up.railway.app/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
